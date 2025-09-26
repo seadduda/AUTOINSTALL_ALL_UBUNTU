@@ -1,0 +1,20 @@
+[Unit]
+Description=OSCam_r11720_emu_smod Service
+After=network.target
+
+[Service]
+Type=simple
+
+# Možeš ovdje staviti dodatne opcije (npr. -r, -b, -d)
+#OPTIONS=-b -r 2
+
+ExecStart=/usr/local/bin/oscam2 -c /usr/local/etc/oscam2 $OPTIONS
+WorkingDirectory=/usr/local/etc/oscam2
+
+Restart=always
+RestartSec=5
+
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

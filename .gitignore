@@ -1,0 +1,5 @@
+# ignore local binaries not to commit accidentally (but recommended to commit bin/oscam2 if you want restore)
+*.swp
+*.bak
+*.log
+/tmp
